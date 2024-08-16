@@ -8,14 +8,13 @@ body {
 
 .container {
     display: flex;
+    flex-wrap: nowrap;
     width: 100%;
-    max-width: 210mm; /* A4 width is 210mm */
+    max-width: 210mm; /* A4 width */
+    height: auto;
     margin: 0 auto;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
-    padding: 20px;
-    box-sizing: border-box;
-    flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
 .sidebar {
@@ -135,29 +134,26 @@ body {
     .container {
         width: 100%;
         max-width: 210mm;
-        height: 297mm; /* A4 height is 297mm */
         padding: 0;
     }
 
     .sidebar {
-        width: 30%;
+        width: 35%; /* Increased width for better alignment */
+        padding: 15px; /* Adjusted padding */
     }
 
     .main-content {
-        width: 70%;
-    }
-
-    .sidebar, .main-content {
-        padding: 10mm; /* Add padding to fit content neatly */
-    }
-
-    /* Ensure links and colors print in a way that is legible */
-    .sidebar a, .main-content h2 {
-        color: black;
+        width: 65%; /* Adjusted width to fit the page */
+        padding: 15px; /* Adjusted padding */
     }
 
     /* Avoid page break inside sections */
     .sidebar, .main-content, .main-content section {
         page-break-inside: avoid;
+    }
+
+    /* Remove unnecessary styles for printing */
+    .sidebar a, .main-content h2 {
+        color: black;
     }
 }
