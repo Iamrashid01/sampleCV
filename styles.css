@@ -8,20 +8,21 @@ body {
 
 .container {
     display: flex;
-    width: 100%;
-    max-width: 210mm; /* A4 width */
-    height: auto;
+    width: 210mm; /* A4 width */
+    height: 297mm; /* A4 height */
     margin: 0 auto;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
+    box-sizing: border-box;
 }
 
 .sidebar {
-    width: 35%; /* Adjusted for balance */
+    width: 30%; /* Adjusted to fit within A4 */
     background-color: #2c3e50;
     color: #ecf0f1;
     padding: 20px;
     box-sizing: border-box;
+    overflow: hidden; /* Ensure no overflow */
 }
 
 .sidebar header {
@@ -76,10 +77,11 @@ body {
 }
 
 .main-content {
-    width: 65%; /* Adjusted width */
+    width: 70%; /* Adjusted to fit within A4 */
     background-color: #ecf0f1;
     padding: 20px;
     box-sizing: border-box;
+    overflow: hidden; /* Ensure no overflow */
 }
 
 .main-content h2 {
@@ -127,24 +129,24 @@ body {
         box-shadow: none;
         margin: 0;
         padding: 0;
-        width: 100%;
-        max-width: none;
+        width: 210mm;
+        height: 297mm;
     }
 
     .container {
-        width: 100%;
-        max-width: 210mm;
+        width: 210mm;
+        height: 297mm;
         padding: 0;
     }
 
     .sidebar {
-        width: 35%; /* Fixed width for printing */
-        padding: 15px; /* Adjusted padding */
+        width: 30%;
+        padding: 15px;
     }
 
     .main-content {
-        width: 65%; /* Fixed width for printing */
-        padding: 15px; /* Adjusted padding */
+        width: 70%;
+        padding: 15px;
     }
 
     .sidebar, .main-content, .main-content section {
